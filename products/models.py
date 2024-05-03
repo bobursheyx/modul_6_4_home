@@ -13,7 +13,7 @@ class Category(models.Model):
 
 
 class Products(models.Model):
-    category = models.ForeignKey(to = "Category", on_delete=models.CASCADE)
+    category = models.ForeignKey(to="Category", on_delete=models.CASCADE)
     model = models.CharField(max_length=100)
     make = models.CharField(max_length=100)
     body = models.TextField()
@@ -22,7 +22,6 @@ class Products(models.Model):
     
     class Meta:
         db_table = 'products'
-        
         
     def __str__(self) -> str:
         return f"{self.category.name}  {self.model}"

@@ -10,7 +10,8 @@ Make: {{ product.make }}<br>
 CAtegory: {{ product.category }}<br>
 Body: {{ product.body }}<hr/>
 
-<a href="{% url 'get_info'%}" >home</a><br>
+<a href="{% url 'products:get_info'%}" >home</a><br>
+<a href="{% url 'products:update' product.pk %}" >Update</a><br>
 
 </body>
 
